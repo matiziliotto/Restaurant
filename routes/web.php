@@ -21,3 +21,5 @@ Route::get('/home', 'HomeController@index')->name('home')->middleware('verified'
 
 Route::get('/perfil', 'PerfilController@perfil')->name('perfil')->middleware('verified');
 Route::post('/actualizarPerfil', 'PerfilController@actualizarPerfil')->name('actualizarPerfil')->middleware('verified');
+
+Route::get('/notificarMenues', 'MailController@notificarMenues')->name('notificarMenues')->middleware('verified');
