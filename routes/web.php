@@ -18,3 +18,6 @@ Route::get('/', function () {
 Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
+
+Route::get('/perfil', 'PerfilController@perfil')->name('perfil')->middleware('verified');
+Route::post('/actualizarPerfil', 'PerfilController@actualizarPerfil')->name('actualizarPerfil')->middleware('verified');
